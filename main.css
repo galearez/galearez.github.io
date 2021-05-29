@@ -1,0 +1,114 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow: hidden;
+}
+/* Controles en pantalla */
+.BtnArriba {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.BtnAbajo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.ControlesPagina {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.ControlesPagina div:first-child {
+  border-radius: 50px 50px 0 0;
+}
+.ControlesPagina div:last-child {
+  border-radius: 0 0 50px 50px;
+}
+.ControlesPagina .BtnPantalla {
+  background-color: black;
+  width: 15px;
+  height: 40px;
+  margin: 1px;
+}
+.Mostrar {
+  display: block;
+}
+
+/* Estilo del header */
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .LetreroContinuar {
+  animation: Parpadear 4000ms;
+  animation-iteration-count: infinite;
+  font-size: 9rem;
+}
+/* Estilo proyecto 1 */
+.Proyecto1 {
+  background-color: teal;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilo proyecto 2 */
+.Proyecto2 {
+  background-color: tomato;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilo del footer */
+footer {
+  width: 100%;
+  height: 100vh;
+  background-color: burlywood;
+}
+
+/* Animación: keyframes */
+@keyframes Parpadear {
+  from {
+    color: rgba(0, 0, 0, 1);
+  }
+  50% {
+    color: rgba(0, 0, 0, 0);
+  }
+  to {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+/* Animate on scroll, when object is in viewport it will slide in and stay there once loaded */
+/* I want to try a colouful palette insted of something more classic and "boring" */
+/* I will create a box in the header that will resemble to a terminal window and will show
+    which technologies i am good at, and which i am currently learning */
+
+/* 
+.One-Dollar-Icons-1-hex { color: #010326; }
+.One-Dollar-Icons-2-hex { color: #EAF205; }
+.One-Dollar-Icons-3-hex { color: #D2D904; }
+.One-Dollar-Icons-4-hex { color: #A1A60A; }
+.One-Dollar-Icons-5-hex { color: #57590F; }
+*/
+
+/* Ascii 219, cuadro se puede animar para parpadear */
+
+/* 
+.Brane-1-hex { color: #BFB417; }
+.Brane-2-hex { color: #D9CC1E; }
+.Brane-3-hex { color: #F2E529; }
+.Brane-4-hex { color: #BFBBBA; }
+.Brane-5-hex { color: #0D0D0D; }
+*/
