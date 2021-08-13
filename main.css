@@ -1,93 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+:root {
+  --container-max-height: 720px;
+  font-size: 16px;
+}
 body {
-  overflow: hidden;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
-/* Controles en pantalla */
-.BtnArriba {
-  display: none;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.BtnAbajo {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-.ControlesPagina {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-.ControlesPagina div:first-child {
-  border-radius: 50px 50px 0 0;
-}
-.ControlesPagina div:last-child {
-  border-radius: 0 0 50px 50px;
-}
-.ControlesPagina .BtnPantalla {
-  background-color: black;
-  width: 15px;
-  height: 40px;
-  margin: 1px;
-}
-.Mostrar {
-  display: block;
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Estilo del header */
 header {
   width: 100%;
   height: 100vh;
+  max-height: var(--container-max-height);
+}
+header .color-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffec72;
+  width: 65vw;
+  height: 100%;
+  max-height: var(--container-max-height);
+}
+header .content {
+  font-size: 18px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  max-height: 350px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
-header .LetreroContinuar {
-  animation: Parpadear 4000ms;
-  animation-iteration-count: infinite;
-  font-size: 9rem;
+header .content .text {
+  max-width: 500px;
 }
-/* Estilo proyecto 1 */
-.Proyecto1 {
-  background-color: teal;
-  width: 100%;
-  height: 100vh;
+header .content .text p {
+  margin-top: 10px;
+  color: black;
+}
+header .content .console {
+  min-width: 550px;
+  height: 350px;
+  background-color: rgb(32, 32, 32);
+  border-radius: 15px;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+header .console hr {
+  margin-top: 35px;
+  border-color: white;
+}
+header .console .elements {
+  padding: 10px 15px;
+}
+header .console .elements .header {
+  color: orange;
+  font-weight: 600;
+}
+header .console .elements .header .command {
+  color: white;
+  font-weight: 400;
+}
+header .console .elements .skillset-info {
+  color: white;
+  margin: 7.5px 0;
+}
+header .console .elements .skillset-info .skill-block:nth-child(1n + 2) {
+  margin-top: 15px;
+}
+header .console .elements .skillset-info .skill-block {
+  margin: 7.5px 0;
+}
+header .console .elements .skillset-info .skill-block p {
+  margin: 5px 0;
+}
+header .console .elements .skillset-info .skill-block .title-green {
+  font-weight: 600;
+  background-color: green;
+  padding: 0 5px;
+}
+header .console .elements .skillset-info .skill-block .title-blue {
+  font-weight: 600;
+  background-color: mediumblue;
+  padding: 0 5px;
+}
+header .console .elements .skillset-info .skill-block .title-yellow {
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+  background-color: yellow;
+  padding: 0 5px;
+}
+header .console .elements .footer {
+  color: orange;
+  font-weight: 600;
+}
+header .console .cursor {
+  color: white;
 }
 
-/* Estilo proyecto 2 */
-.Proyecto2 {
-  background-color: tomato;
+/* Pruebas de la animación de la consola */
+.prueba {
+  display: none;
+}
+
+/* Estilo de las secciones */
+section {
   width: 100%;
   height: 100vh;
+  max-height: var(--container-max-height);
+  position: relative;
+}
+section .color-square-1 {
+  position: absolute;
+  left: 50%;
+  background-color: #ffcc66;
+  width: 45vw;
+  height: 100%;
+  max-height: var(--container-max-height);
+}
+section .color-square-2 {
+  position: absolute;
+  left: 0%;
+  background-color: #e8c75d;
+  width: 5vw;
+  height: 100%;
+  max-height: var(--container-max-height);
+}
+section .color-square-3 {
+  position: absolute;
+  left: 40%;
+  background-color: #e8e45d;
+  width: 60%;
+  height: 100%;
+  max-height: var(--container-max-height);
+}
+section .content {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  max-height: 350px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+section .content .text {
+  max-width: 500px;
+}
+section .content .text .tools {
+  display: flex;
+  margin-bottom: 10px;
+}
+section .content .text .tools .tool-pill {
+  background-color: rgba(1, 1, 1, 0.2);
+  padding: 5px;
+  margin-right: 5px;
+}
+section .content .image-ph {
+  margin-left: 100px;
+  min-width: 270px;
+  min-height: 480px;
+  background-color: green;
 }
 
 /* Estilo del footer */
 footer {
   width: 100%;
   height: 100vh;
-  background-color: burlywood;
+  max-height: var(--container-max-height);
+  position: relative;
+}
+footer .color-square {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  background-color: #ffec72;
+  width: 20%;
+  height: 50%;
+}
+
+/* Estilo cuando se mueve hacia abajo aparece la información de cada proyecto*/
+.slider {
+  position: relative;
+  opacity: 0;
+}
+.from-left {
+  transform: translateX(-50%);
+}
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left.show,
+.from-right.show {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Animación: keyframes */
 @keyframes Parpadear {
   from {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
   }
   50% {
-    color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0);
   }
   to {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes ShowElement {
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
+}
+@keyframes Hide-element {
+  from {
+    color: rgba(255, 255, 255, 1);
+  }
+  to {
+    color: rgba(255, 255, 255, 0);
   }
 }
 /* Animate on scroll, when object is in viewport it will slide in and stay there once loaded */
