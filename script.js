@@ -23,7 +23,7 @@ const elementsToShow = document.querySelectorAll('.add-element');
 const elementToHide = document.querySelector('.remove-element');
 
 function hideELement() {
-  return setTimeout(() => {
+  setTimeout(() => {
     elementToHide.classList.add('prueba');
   }, 800);
 }
