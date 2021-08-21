@@ -5,7 +5,8 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --container-max-height-mobile: 568px;
+  --container-max-height-mobile: 400px;
+  --container-max-height-tablet: 580px;
   --container-max-height-desktop: 720px;
   font-size: 16px;
 }
@@ -14,7 +15,7 @@ body {
   max-width: 1500px;
   margin: auto;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 h1 {
   font-size: 2rem;
@@ -31,7 +32,7 @@ h2 {
 header {
   background-color: #ffec72;
   height: 100vh;
-  max-height: var(--container-max-height-mobile);
+  max-height: 568px;
 }
 header .content {
   padding: 20px;
@@ -47,6 +48,8 @@ header .content .text p {
 }
 header .content .console {
   background-color: rgb(32, 32, 32);
+  max-width: 708px;
+  margin: auto;
   height: 320px;
   padding: 10px;
   border-radius: 15px;
@@ -117,28 +120,35 @@ header .console .cursor {
 }
 
 /* Estilo de las secciones */
-.first-section {
-  padding: 50px 20px 20px 20px;
-}
 section {
   height: 100vh;
   max-height: var(--container-max-height-mobile);
-  padding: 20px;
+  margin: 20px;
 }
 .image-ph {
   display: none;
 }
 section .content {
   position: relative;
+  height: 100%;
   z-index: 10;
+}
+section .content .text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section .content .text .tools {
+  display: flex;
 }
 section .color-square-1 {
   position: absolute;
   right: 0;
   background-color: #ffcc66;
   width: 98%;
-  height: 50%;
-  max-height: var(--container-max-height-desktop);
+  height: 40%;
+  max-height: 260px;
   transform: translateY(80px);
 }
 section .color-square-2 {
@@ -146,19 +156,23 @@ section .color-square-2 {
   left: 0%;
   background-color: #e8c75d;
   width: 5vw;
-  height: 50%;
-  max-height: var(--container-max-height-desktop);
-  transform: translateY(-5%);
+  height: 40%;
+}
+section .content .text .tools .tool-pill {
+  background-color: rgba(1, 1, 1, 0.2);
+  padding: 5px;
+  margin-right: 5px;
 }
 
 /* Este quiero que sea todo el contenido en fondo amarillo, asi que
 le vamos a aplicar el estilo a la clase content */
-section.third-section .color-square-3 {
-  position: absolute;
+.third-section {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+section.third-section .content {
+  padding: 10px;
   background-color: #e8e45d;
-  width: 95%;
-  height: 95%;
-  transform: translate(-10px, -10px);
 }
 section .content .text {
   height: 100%;
@@ -169,23 +183,77 @@ section .content .text {
 }
 
 .link {
-  display: block;
+  display: inline-block;
   padding: 10px;
   background-color: rgb(32, 32, 32);
   border-radius: 5px;
   font-weight: 600;
   color: white;
   text-decoration: none;
+  margin-top: 15px;
+}
+
+/* estilo del footer */
+footer {
+  width: 100%;
+  height: 100vh;
+  max-height: 568px;
+  position: relative;
+}
+footer .color-square {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  background-color: #ffec72;
+  width: 20%;
+  height: 50%;
 }
 
 /* Media queries */
-@media screen and (min-width: 420px) {
-  .first-section {
-    padding: 20px;
+@media screen and (min-width: 768px) {
+  section {
+    max-height: var(--container-max-height-tablet);
+  }
+  section .content {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    max-width: 1100px;
+    max-height: 350px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  section .content .image-ph {
+    display: block;
+    min-width: 270px;
+    min-height: 480px;
+    background-color: green;
+  }
+  section .color-square-1 {
+    position: absolute;
+    right: 0;
+    background-color: #ffcc66;
+    width: 60vw;
+    height: 40%;
+    max-height: 260px;
+    transform: translateY(80px);
+  }
+  section .color-square-2 {
+    position: absolute;
+    left: 0;
+    background-color: #e8c75d;
+    width: 5vw;
+    height: 50%;
+    transform: none;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   :root {
     font-size: 18px;
   }
@@ -245,11 +313,11 @@ section .content .text {
     padding-bottom: 0;
   }
   section {
-    width: 100%;
     max-height: var(--container-max-height-desktop);
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
+    margin: 0;
   }
   section .color-square-1 {
     position: absolute;
@@ -269,19 +337,12 @@ section .content .text {
     max-height: var(--container-max-height-desktop);
     transform: none;
   }
-  section .color-square-3 {
-    position: absolute;
-    left: 40%;
-    background-color: #e8e45d;
-    width: 60%;
-    height: 100%;
-    max-height: var(--container-max-height-desktop);
-  }
   section .content {
     font-size: 18px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
     max-width: 1100px;
     max-height: 350px;
     margin: auto;
@@ -289,6 +350,9 @@ section .content .text {
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
+  }
+  section.third-section .content {
+    padding: 0;
   }
   section .content .text {
     display: block;
@@ -298,14 +362,8 @@ section .content .text {
     display: flex;
     margin-bottom: 10px;
   }
-  section .content .text .tools .tool-pill {
-    background-color: rgba(1, 1, 1, 0.2);
-    padding: 5px;
-    margin-right: 5px;
-  }
   section .content .image-ph {
     display: block;
-    margin-left: 100px;
     min-width: 270px;
     min-height: 480px;
     background-color: green;
@@ -313,10 +371,7 @@ section .content .text {
 
   /* Estilo del footer */
   footer {
-    width: 100%;
-    height: 100vh;
     max-height: var(--container-max-height-desktop);
-    position: relative;
   }
   footer .color-square {
     position: absolute;
@@ -333,10 +388,10 @@ section .content .text {
     opacity: 0;
   }
   .from-left {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
   .from-right {
-    transform: translateX(50%);
+    transform: translateX(40%);
   }
 
   .from-left.show,
@@ -345,7 +400,4 @@ section .content .text {
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-@media screen and (min-width: 1024px) {
 }
