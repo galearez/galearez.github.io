@@ -51,19 +51,18 @@ function handleAutoSetTimeout(arr) {
 
 let msArray = [];
 let idQueryTime = [];
-if (window.innerWidth > 1024) {
-  msArray = [
-    300, 1200, 1500, 1800, 1900, 2000, 2100, 2400, 2900, 3200, 3300, 3800, 3900,
-    4000, 4300, 5000,
-  ];
 
-  for (let i = 0, n = elementsToShow.length; i < n; i++) {
-    idQueryTime.push([i, elementsToShow[i], msArray[i]]);
-  }
+msArray = [
+  300, 1200, 1500, 1800, 1900, 2000, 2100, 2400, 2900, 3200, 3300, 3800, 3900,
+  4000, 4300, 5000,
+];
 
-  window.addEventListener('load', handleAutoSetTimeout(idQueryTime));
-  window.removeEventListener('load', handleAutoSetTimeout(idQueryTime));
-
-  clearTimeout(timeoutRemove);
-  clearTimeoutArray(timeoutArray);
+for (let i = 0, n = elementsToShow.length; i < n; i++) {
+  idQueryTime.push([i, elementsToShow[i], msArray[i]]);
 }
+
+window.addEventListener('load', handleAutoSetTimeout(idQueryTime));
+window.removeEventListener('load', handleAutoSetTimeout(idQueryTime));
+
+clearTimeout(timeoutRemove);
+clearTimeoutArray(timeoutArray);
