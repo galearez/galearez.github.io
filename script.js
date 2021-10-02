@@ -24,14 +24,14 @@ const elementToHide = document.querySelector('.remove-element');
 
 function hideELement() {
   setTimeout(() => {
-    elementToHide.classList.add('prueba');
+    elementToHide.classList.add('hide');
   }, 800);
 }
 
 let timeoutArray = [];
 function timeoutAdd(id, query, time) {
   timeoutArray[id] = setTimeout(() => {
-    query.classList.remove('prueba');
+    query.classList.remove('hide');
   }, time);
 }
 

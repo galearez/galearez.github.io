@@ -1,0 +1,61 @@
+[
+    {
+      "properties": {
+        "steps": 11,
+        "hue": {
+          "start": 25,
+          "end": 32,
+          "curve": "easeOutQuad"
+        },
+        "saturation": {
+          "start": 0.03,
+          "end": 0.73,
+          "rate": 1,
+          "curve": "easeOutQuad"
+        },
+        "brightness": {
+          "start": 1,
+          "end": 0,
+          "curve": "linear"
+        }
+      },
+      "options": {
+        "minorSteps": [
+          0,
+          1
+        ],
+        "name": "New Color Copy Copy",
+        "rotation": "clockwise"
+      }
+    },
+    {
+      "properties": {
+        "steps": 12,
+        "hue": {
+          "start": 25,
+          "end": 56,
+          "curve": "linear"
+        },
+        "saturation": {
+          "start": 1,
+          "end": 1,
+          "rate": 2,
+          "curve": "easeOutQuad"
+        },
+        "brightness": {
+          "start": 1,
+          "end": 1,
+          "curve": "linear"
+        }
+      },
+      "options": {
+        "minorSteps": [
+          0,
+          1
+        ],
+        "name": "#ffcc66",
+        "provideInverted": false,
+        "rotation": "clockwise"
+      }
+    }
+  ]
