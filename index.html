@@ -8,22 +8,20 @@
     <link rel="stylesheet" href="main.css" />
     <script src="script.js" async></script>
   </head>
-  <!-- Ya solo faltan las demos, terminar la sección de contacto y refactorización -->
   <body>
     <header>
       <div class="color-square"></div>
       <div class="content">
         <div class="text">
-          <h1>DRAFT</h1>
-          <!--  <h1>Welcome, <span> I'm Josep Galearez </span></h1> -->
+          <h1>Welcome, <span> I'm Josep Galearez </span></h1>
           <p>
-            I'm a front-end web developer, I want to create solid projects, so
-            people can interact with them, I would like to work to build very
-            well made UI's always following the rule Form Follows Function.
+            I'm a front-end web developer, I want to build sites and apps for
+            people. I enjoy making UI's, but I would like to explore other
+            fields in the future, always with the web as my target.
           </p>
           <p>
-            I really like the web and I think the web is the platform, I am
-            exited for the new technologies comming.
+            I love the web and I belive it is the ultimate platform. I am
+            excited about the future.
           </p>
         </div>
         <div class="console">
@@ -85,22 +83,26 @@
       <div class="content">
         <div class="image-ph slider from-left"></div>
         <div class="text slider from-right">
-          <h2>Todos and notebook</h2>
-          <div class="tools">
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
+          <h2>To-dos and notebook</h2>
+          <div class="tags">
+            <div class="tag green">FOSS</div>
+            <div class="tag blue">ReactJs</div>
+            <div class="tag blue">Tailwind/CSS</div>
+            <div class="tag blue">Typescript</div>
+            <div class="tag blue">Slate</div>
           </div>
           <p>
-            This app is a personal tasks manager, built to work hundred percent
-            on a browser, it has two parts a To-do list feature and a notebook
-            feature, it's made with ReactJs and my goal is to make run only in
-            the browser using API as IndexedDB, as a database to store the data.
+            A personal organization app, it has two parts a To-do list feature
+            and a notebook feature. It is build to work hundred percent on the
+            browser, ReactJs it's the main library and I want to explore
+            solutions, for storage, to make an useful application.
           </p>
-          <div>
-            <a href="#" class="link"
-              >Ir al enlace
-              <span>&#x2192;</span>
+          <div class="links">
+            <a href="https://galearez.github.io/plan/" class="link">
+              Live demo
+            </a>
+            <a href="https://github.com/galearez/plan/" class="link">
+              Source code
             </a>
           </div>
         </div>
@@ -110,68 +112,62 @@
       <div class="content">
         <div class="text slider from-left">
           <h2>Interval timer</h2>
-          <div class="tools">
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
+          <div class="tags">
+            <div class="tag blue">ReactJs</div>
+            <div class="tag blue">Tailwind/CSS</div>
+            <div class="tag blue">TypeScript</div>
           </div>
           <p>
-            This is a Interval timer app, my goal was to program my own exercise
-            app I tried to automate the process of creating sets, letting the
-            users use a global rest where they can change it individually or
-            turn it off if they want this is not intended as a opensource
-            project but since it's very basic anyone can use it
+            This app is intended to be a work-out timer app, but since is so
+            simple it can be used as a pomodoro timer too. I implemented some
+            features to improve the process of creating routines.
           </p>
-          <div>
-            <a href="#" class="link"
-              >Ir al enlace
-              <span>&#x2192;</span>
+          <div class="links">
+            <a href="https://galearez.github.io/timer/" class="link">
+              Live demo
+            </a>
+            <a href="https://github.com/galearez/timer/" class="link">
+              Source code
             </a>
           </div>
         </div>
         <div class="image-ph slider from-right"></div>
       </div>
     </section>
-    <section class="third-section">
-      <div class="content">
-        <div class="image-ph slider from-left"></div>
-        <div class="text slider from-right">
-          <h2>Translator</h2>
-          <div class="tools">
-            <div class="tool-pill">tool</div>
-            <div class="tool-pill">tool</div>
-          </div>
-          <p>
-            This is intended to be the first english-something translator, its
-            made with tensorflowjs it's 100% open-source, together with the
-            translator, I built a tool to translate wikipedia pages, where some
-            user can fetch a english page and translate it to use it as a draft
-            to review the translation and then upload it to the wikipedia.
-          </p>
-          <div>
-            <a href="#" class="link"
-              >Ir al enlace
-              <span>&#x2192;</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer>
       <div class="content">
+        <div class="info">
+          <h2>Contact me</h2>
+          <p>
+            If you are interested on work with me or you want me to work with
+            you, send me a message.
+          </p>
+        </div>
+        <form
+          action="mailto:prueba@gmail.com"
+          method="get"
+          enctype="text/plain"
+          class="email-form"
+        >
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            E-mail
+            <input type="text" name="email" placeholder="example@email.com" />
+          </label>
+          <button type="submit">Send e-mail</button>
+        </form>
         <div class="links">
-          <a href="" class="github-link">
+          <a href="https://github.com/galearez" class="github-link">
             <img src="github.svg" alt="" />
             <span>GitHub</span>
           </a>
+          <!-- href="./cv.pdf" download="josep-galearez-cv" -->
           <a href="" class="cv-link">
             <img src="contact.svg" alt="" />
             <span>CV</span>
-          </a>
-          <a href="" class="mail-link">
-            <img src="email.svg" alt="" />
-            <span>e-mail</span>
           </a>
         </div>
       </div>

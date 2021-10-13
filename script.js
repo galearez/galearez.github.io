@@ -1,3 +1,4 @@
+//Slide-in on scroll
 const slideElementsToShow = document.querySelectorAll('.slider');
 
 const options = {
@@ -19,6 +20,7 @@ slideElementsToShow.forEach((elem) => {
   observer.observe(elem);
 });
 
+//Console animation
 const elementsToShow = document.querySelectorAll('.add-element');
 const elementToHide = document.querySelector('.remove-element');
 

@@ -10,7 +10,6 @@ html {
   --container-max-height-mobile: 400px;
   --container-max-height-tablet: 580px;
   --container-max-height-desktop: 720px;
-  --footer-max-height: 568px;
   font-size: 16px;
 }
 body {
@@ -48,7 +47,7 @@ header .content .text p {
   font-size: 1rem;
 }
 header .content .console {
-  background-color: rgb(32, 32, 32);
+  background-color: #202020;
   max-width: 708px;
   margin: auto;
   margin-bottom: 20px;
@@ -104,7 +103,7 @@ header .console .elements .skillset-info .skill-block .title-blue {
 }
 header .console .elements .skillset-info .skill-block .title-yellow {
   font-weight: 600;
-  color: rgb(34, 34, 34);
+  color: #202020;
   background-color: yellow;
   padding: 0 5px;
 }
@@ -136,51 +135,54 @@ section .content {
   height: 100%;
   padding: 10px 20px;
 }
-section .content .text {
-  height: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-section .content .text .tools {
-  display: flex;
-}
-section .content .text .tools .tool-pill {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  margin-right: 5px;
-}
-
-/* Este quiero que sea todo el contenido en fondo amarillo, asi que
-le vamos a aplicar el estilo a la clase content */
 section.first-section .content {
   background-color: #ff9900;
 }
 section.second-section .content {
   background-color: #ff9d00;
 }
-section.third-section .content {
-  background-color: #ffa100;
+section .content .text {
+  height: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.link {
+section .content .text .tags {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+section .content .text .tags .tag {
+  padding: 5px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+.tag.green {
+  background-color: #6aff19;
+}
+.tag.blue {
+  background-color: #009dff;
+}
+section .content .text .links .link {
   display: inline-block;
   padding: 10px;
-  background-color: rgb(32, 32, 32);
-  border-radius: 5px;
+  background-color: #202020;
+  border-radius: 2px;
   font-weight: 600;
   color: white;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-right: 5px;
 }
 
 /* estilo del footer */
 footer {
   height: 100vh;
-  max-height: 568px;
+  max-height: var(--container-max-height-tablet);
   position: relative;
-  background-color: #ffa500;
+  background-color: #ffa100;
 }
 footer .content {
   height: 100%;
@@ -190,38 +192,68 @@ footer .content {
   justify-content: center;
   align-items: center;
 }
-footer .content h2 {
+footer .content .info h2 {
   font-size: 2rem;
   font-weight: 600;
+  padding: 0 20px;
+}
+footer .content .info p {
+  max-width: 400px;
+  padding: 0 20px;
+}
+footer .content .email-form {
+  padding: 0 20px;
+  width: 85%;
+  max-width: 400px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+footer .content .email-form label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+footer .content .email-form input {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  margin-top: 10px;
+}
+footer .content .email-form button {
+  font-size: 18px;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #202020;
+  color: white;
 }
 footer .content .links {
   display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-  align-items: center;
-  width: 100%;
+  margin-top: 30px;
+  align-items: baseline;
+  justify-content: space-evenly;
+  width: 85%;
+  max-width: 400px;
 }
 footer .content .links a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #202020;
+}
+footer .content .links a:hover {
+  text-decoration: underline;
 }
 footer .content .links a img {
   width: 60px;
   margin-bottom: 10px;
 }
-.github-link {
-  display: inline-block;
-  padding: 10px 12px;
-  font-size: 1.2rem;
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 2px;
-  text-align: center;
-}
-
+.github-link,
 .cv-link {
   display: inline-block;
   padding: 10px 12px;
@@ -231,27 +263,14 @@ footer .content .links a img {
   text-decoration: none;
   border-radius: 2px;
   text-align: center;
-}
-
-.mail-link {
-  display: inline-block;
-  padding: 10px 12px;
-  font-size: 1.2rem;
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 2px;
-  text-align: center;
+  cursor: pointer;
 }
 
 /* Media queries */
 @media screen and (min-width: 568px) {
-  footer .content .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 400px;
-    margin-top: 40px;
+  footer .content h2,
+  footer .content p {
+    text-align: center;
   }
 }
 
@@ -275,15 +294,18 @@ footer .content .links a img {
   }
   section .content .image-ph {
     display: block;
-    min-width: 270px;
-    min-height: 480px;
+    min-width: 264px;
+    min-height: 473px;
     background-color: green;
   }
+  footer .content .email-form {
+    margin-top: 20px;
+  }
   footer .content .links {
-    max-width: 500px;
+    margin-top: 40px;
   }
   footer .content .links a img {
-    width: 100px;
+    width: 80px;
     margin-bottom: 10px;
   }
 }
@@ -365,20 +387,10 @@ footer .content .links a img {
     display: flex;
     margin-bottom: 10px;
   }
-  section .content .image-ph {
-    display: block;
-    min-width: 270px;
-    min-height: 480px;
-    background-color: green;
-  }
 
   /* Estilo del footer */
   footer {
-    max-height: var(--footer-max-height);
-    margin: 20px;
-  }
-  footer .content h2 {
-    font-size: 3rem;
+    max-height: var(--container-max-height);
   }
 
   /* Estilo cuando se mueve hacia abajo aparece la información de cada proyecto*/
