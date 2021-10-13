@@ -294,9 +294,11 @@ footer .content .links a img {
   }
   section .content .image-ph {
     display: block;
-    min-width: 264px;
-    min-height: 473px;
-    background-color: green;
+    max-width: 264px;
+    max-height: 473px;
+    border: black solid;
+    border-width: 15px 2px;
+    border-radius: 5px;
   }
   footer .content .email-form {
     margin-top: 20px;
@@ -404,7 +406,6 @@ footer .content .links a img {
   .from-right {
     transform: translateX(40%);
   }
-
   .from-left.show,
   .from-right.show {
     transition: opacity 250ms ease-in, transform 400ms ease-in;
