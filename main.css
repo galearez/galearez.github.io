@@ -28,12 +28,14 @@ h1 {
   font-weight: bold;
   font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 }
+
 /* Estilo de la barra de navegación */
 nav ul {
   width: 100%;
   padding: 20px 50px 20px 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 nav ul li {
   margin-left: 1rem;
@@ -42,6 +44,16 @@ nav a {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
+}
+.link-github {
+  background-color: #383838;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.link-github > a {
+  color: white;
 }
 
 /* Estilo del header */
