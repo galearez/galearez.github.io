@@ -28,38 +28,53 @@ h1 {
   font-weight: bold;
   font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 }
+/* Estilo de la barra de navegación */
+nav ul {
+  width: 100%;
+  padding: 20px 50px 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li {
+  margin-left: 1rem;
+}
+nav a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
 
 /* Estilo del header */
 header {
   width: 100%;
   height: 90vh;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 50px;
 }
 h1 {
+  color: red;
   margin-bottom: 20px;
   margin-left: 5px;
-  color: red;
 }
 h1 + p {
+  color: lightgrey;
   margin-bottom: 20px;
   font-size: 3rem;
   font-weight: 600;
-  color: lightgrey;
 }
 header ul {
   display: flex;
 }
 header ul li {
+  padding: 5px 8px;
   border: 1px red solid;
   border-radius: 5px;
-  padding: 5px 8px;
   margin-right: 8px;
 }
 header a {
   color: lightgray;
-  text-decoration: none;
   font-size: 1.2rem;
+  text-decoration: none;
 }
