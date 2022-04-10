@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,900&display=swap');
 
 /* The color was made in https://colorbox.io/, then import the color.json file in the site to see the colors */
 
 html {
   scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
 }
 :root {
   --container-max-height-mobile: 400px;
@@ -13,403 +17,49 @@ html {
   font-size: 16px;
 }
 body {
-  width: 100%;
-  max-width: 1500px;
+  width: min(1500px, 100%);
   margin: auto;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   overflow-x: hidden !important;
+  background-color: #202020;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 6rem;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Estilo del header */
 header {
-  background-color: #ff9500;
-}
-header h1 {
+  width: 100%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  padding: 50px;
 }
-header .content {
-  padding: 20px;
-}
-header .content .text p {
-  margin-top: 10px;
-  color: black;
-  font-size: 1rem;
-}
-header .content .console {
-  background-color: #202020;
-  max-width: 708px;
-  margin: auto;
+h1 {
   margin-bottom: 20px;
-  height: 320px;
-  padding: 10px;
+  margin-left: 5px;
+  color: red;
+}
+h1 + p {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: lightgrey;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  border: 1px red solid;
   border-radius: 5px;
-  position: relative;
-  bottom: -20px;
-  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 5px 8px;
+  margin-right: 8px;
 }
-header .content .console hr {
-  margin-top: 20px;
-  border-color: white;
-}
-header .console .elements {
-  padding: 7.5px 0;
-}
-header .console .elements .header {
-  color: #009dff;
-  font-weight: 600;
-}
-header .console .elements .header .command {
-  color: white;
-  font-weight: 400;
-}
-header .console .elements .skillset-info {
-  color: white;
-  margin: 7.5px 0;
-}
-header .console .elements .skillset-info .skill-block:nth-child(1n + 2) {
-  margin-top: 15px;
-}
-header .console .elements .skillset-info .skill-block {
-  margin: 7.5px 0;
-}
-header .console .elements .skillset-info .skill-block p {
-  margin: 5px 0;
-}
-header .console .elements .skillset-info .skill-block .title-green {
-  font-weight: 600;
-  background-color: green;
-  padding: 0 5px;
-}
-header .console .elements .skillset-info .skill-block .title-blue {
-  font-weight: 600;
-  background-color: mediumblue;
-  padding: 0 5px;
-}
-header .console .elements .skillset-info .skill-block .title-yellow {
-  font-weight: 600;
-  color: #202020;
-  background-color: yellow;
-  padding: 0 5px;
-}
-header .console .elements .footer {
-  color: #009dff;
-  font-weight: 600;
-}
-header .console .cursor {
-  color: white;
-}
-
-/* 
-  Esta clase oculta los elementos en la animación de la consola, 
-  también lo uso para mostrar los elementos al removerla
-*/
-.hide {
-  display: none;
-}
-
-/* Estilo de las secciones */
-section {
-  height: 100vh;
-  max-height: var(--container-max-height-mobile);
-}
-.image-ph {
-  display: none;
-}
-section .content {
-  height: 100%;
-  padding: 10px 20px;
-}
-section.first-section .content {
-  background-color: #ff9900;
-}
-section.second-section .content {
-  background-color: #ff9d00;
-}
-section .content .text {
-  height: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-section .content .text .tags {
-  display: flex;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-section .content .text .tags .tag {
-  padding: 5px;
-  border-radius: 2px;
-  font-weight: 600;
-}
-.tag.green {
-  background-color: #6aff19;
-}
-.tag.blue {
-  background-color: #009dff;
-}
-section .content .text .links .link {
-  display: inline-block;
-  padding: 10px;
-  background-color: #202020;
-  border-radius: 2px;
-  font-weight: 600;
-  color: white;
+header a {
+  color: lightgray;
   text-decoration: none;
-  margin-top: 25px;
-  margin-right: 5px;
-}
-
-/* estilo del footer */
-footer {
-  height: 100vh;
-  max-height: var(--container-max-height-tablet);
-  position: relative;
-  background-color: #ffa100;
-}
-footer .content {
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-footer .content .info h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 0 20px;
-}
-footer .content .info p {
-  max-width: 400px;
-  padding: 0 20px;
-}
-footer .content .email-form {
-  padding: 0 20px;
-  width: 85%;
-  max-width: 400px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-}
-footer .content .email-form label {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-footer .content .email-form input {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 2px;
-  border: none;
-  margin-top: 10px;
-}
-footer .content .email-form button {
-  font-size: 18px;
-  padding: 5px;
-  border: none;
-  border-radius: 2px;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #202020;
-  color: white;
-}
-footer .content .links {
-  display: flex;
-  margin-top: 30px;
-  align-items: baseline;
-  justify-content: space-evenly;
-  width: 85%;
-  max-width: 400px;
-}
-footer .content .links a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #202020;
-}
-footer .content .links a:hover {
-  text-decoration: underline;
-}
-footer .content .links a img {
-  width: 60px;
-  margin-bottom: 10px;
-}
-.github-link,
-.cv-link {
-  display: inline-block;
-  padding: 10px 12px;
   font-size: 1.2rem;
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 2px;
-  text-align: center;
-  cursor: pointer;
-}
-
-/* Media queries */
-@media screen and (min-width: 568px) {
-  footer .content h2,
-  footer .content p {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  section {
-    max-height: var(--container-max-height-tablet);
-  }
-  section .content {
-    font-size: 18px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    max-width: 1100px;
-    max-height: 350px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
-  section .content .image-ph {
-    display: block;
-    max-width: 264px;
-    max-height: 473px;
-    border: black solid;
-    border-width: 15px 2px;
-    border-radius: 5px;
-  }
-  footer .content .email-form {
-    margin-top: 20px;
-  }
-  footer .content .links {
-    margin-top: 40px;
-  }
-  footer .content .links a img {
-    width: 80px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  :root {
-    font-size: 18px;
-  }
-
-  /* Estilo del header */
-  header {
-    height: 100vh;
-    width: 100%;
-    display: block;
-    max-height: var(--container-max-height-desktop);
-  }
-  header .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    max-height: 350px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
-  header .content .text {
-    max-width: 500px;
-  }
-  header .content .console {
-    display: block;
-    padding: 0;
-    min-width: 550px;
-    height: 350px;
-    bottom: 0;
-  }
-  header .content .console hr {
-    margin-top: 35px;
-    border-color: white;
-  }
-  header .console .elements {
-    padding: 10px 15px;
-  }
-
-  /* Estilo de las secciones */
-  .first-section {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  section {
-    max-height: var(--container-max-height-desktop);
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-  }
-  section .content {
-    font-size: 18px;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px;
-    max-height: 350px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
-  section .content .text {
-    display: block;
-    height: initial;
-  }
-  section .content .text .tools {
-    display: flex;
-    margin-bottom: 10px;
-  }
-
-  /* Estilo del footer */
-  footer {
-    max-height: var(--container-max-height);
-  }
-
-  /* Estilo cuando se mueve hacia abajo aparece la información de cada proyecto*/
-  .slider {
-    position: relative;
-    opacity: 0;
-  }
-  .from-left {
-    transform: translateX(-40%);
-  }
-  .from-right {
-    transform: translateX(40%);
-  }
-  .from-left.show,
-  .from-right.show {
-    transition: opacity 250ms ease-in, transform 400ms ease-in;
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
