@@ -112,23 +112,22 @@ section#mi {
   justify-content: center;
   align-items: center;
 }
-section#mi > main {
+section#yo > main {
   width: 550px;
 }
-section#mi p {
+section#yo p {
   margin-bottom: 10px;
   line-height: 1.2rem;
   color: lightgray;
 }
-section#mi ul {
+section#yo ul {
   padding: 0.8rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 5px;
   color: lightgray;
 }
-
-section#mi ul li::before {
+section#yo ul li::before {
   content: '\2022';
   color: red;
   font-weight: bold;
