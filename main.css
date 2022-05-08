@@ -180,35 +180,52 @@ section#proyectos {
 
 /* Estilo del pie de página */
 footer {
-  max-width: 1150px;
-  margin: auto;
-  height: 100vh;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
-footer > main {
+footer > .main {
   color: lightgray;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
 }
-footer > main button {
+footer > .main button {
   color: lightgray;
   font-size: 1.1rem;
   background-color: transparent;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
 }
-footer > main p {
-  line-height: 1.2rem;
-  margin-bottom: 20px;
+footer > .main button:hover {
+  color: red;
+}
+.social {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.social > a {
+  padding: 8px 10px;
+  background-color: #383838;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social > a > img {
+  margin-left: 10px;
 }
 .creditos {
-  align-self: flex-end;
   background-color: red;
   padding: 20px;
   font-size: 1.1rem;
   line-height: 1.2rem;
   font-weight: 600;
+  margin-top: auto;
 }
 .creditos a {
   color: lightgray;
@@ -282,5 +299,25 @@ footer > main p {
   }
   section#yo > .main {
     width: 550px;
+  }
+
+  /* Estilo del footer */
+  footer {
+    max-width: 1150px;
+    margin: auto;
+    height: var(--container-height);
+    padding: 0;
+    justify-content: space-around;
+  }
+  footer > .main,
+  footer > .main button {
+    font-size: 1.2rem;
+  }
+  .social {
+    flex-direction: row;
+  }
+  .creditos {
+    align-self: flex-end;
+    margin: 0;
   }
 }
