@@ -150,6 +150,20 @@ section#proyectos {
   display: flex;
   gap: 15px;
 }
+.enlaces-proyecto {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+}
+.enlaces-proyecto > a {
+  background-color: red;
+  padding: 8px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 3px;
+}
 
 /* Estilo del pie de página */
 footer {
@@ -293,9 +307,6 @@ footer > .main button:hover {
     max-width: 500px;
     justify-content: initial;
   }
-  .tarjeta > .img {
-    display: block;
-  }
   .tarjeta .info .descripcion {
     background-color: #383838;
     padding: 28px 30px;
@@ -303,7 +314,14 @@ footer > .main button:hover {
   .proyecto-der .info .descripcion > ul {
     align-self: flex-end;
   }
+  .proyecto-izq .info > .enlaces-proyecto {
+    align-self: initial;
+  }
+  .proyecto-der .info > .enlaces-proyecto {
+    align-self: flex-end;
+  }
   .tarjeta .img {
+    display: block;
     width: 500px;
     height: 375px;
   }
