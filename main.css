@@ -242,3 +242,10 @@ footer > main p {
 .creditos a:hover {
   text-decoration: underline;
 }
+
+/* Estilo para dispositivos de escritorio */
+@media screen and (min-width: 1048px) {
+  :root {
+    font-size: 18px;
+  }
+}
