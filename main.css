@@ -121,61 +121,29 @@ section#proyectos {
   color: lightgray;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 0px;
+  padding: 20px;
 }
-.proyecto-der,
-.proyecto-izq {
+.tarjeta {
+  background-color: #383838;
+  border-radius: 3px;
+  padding: 25px;
+  height: 400px;
   align-self: center;
   display: flex;
-  align-items: center;
-  margin-bottom: 75px;
+  margin-bottom: 20px;
 }
-.proyecto-izq {
-  text-align: right;
+.tarjeta > .img {
+  display: none;
 }
-.proyecto-der .info,
-.proyecto-izq .info {
-  max-width: 500px;
+.tarjeta .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.proyecto-der .info > p,
-.proyecto-izq .info > p {
-  background-color: #383838;
-  padding: 28px 30px;
-}
-.proyecto-der .info > ul,
-.proyecto-izq .info > ul {
+.tarjeta .info > ul {
   display: flex;
   gap: 15px;
-}
-.proyecto-izq .info > ul {
-  align-self: flex-end;
-}
-.proyecto-der .img,
-.proyecto-izq .img {
-  width: 500px;
-  height: 375px;
-}
-.proyecto-der .img::after {
-  content: '';
-  display: block;
-  background-color: lightgray;
-  width: 575px;
-  height: 375px;
-  position: relative;
-  right: 75px;
-  z-index: -1;
-}
-.proyecto-izq .img::before {
-  content: '';
-  display: block;
-  background-color: lightgray;
-  width: 575px;
-  height: 375px;
-  position: relative;
-  z-index: -1;
 }
 
 /* Estilo del pie de página */
@@ -299,6 +267,59 @@ footer > .main button:hover {
   }
   section#yo > .main {
     width: 550px;
+  }
+
+  /* Estlilo sección de proyectos */
+  section#proyectos {
+    padding: 0;
+    gap: 50px;
+  }
+  .tarjeta {
+    background-color: transparent;
+    height: auto;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 75px;
+  }
+  .proyecto-der {
+    text-align: right;
+  }
+  .tarjeta .info {
+    max-width: 500px;
+    justify-content: initial;
+  }
+  .tarjeta > .img {
+    display: block;
+  }
+  .tarjeta .info > p {
+    background-color: #383838;
+    padding: 28px 30px;
+  }
+  .proyecto-der .info > ul {
+    align-self: flex-end;
+  }
+  .tarjeta .img {
+    width: 500px;
+    height: 375px;
+  }
+  .proyecto-izq .img::after {
+    content: '';
+    display: block;
+    background-color: lightgray;
+    width: 575px;
+    height: 375px;
+    position: relative;
+    right: 75px;
+    z-index: -1;
+  }
+  .proyecto-der .img::before {
+    content: '';
+    display: block;
+    background-color: lightgray;
+    width: 575px;
+    height: 375px;
+    position: relative;
+    z-index: -1;
   }
 
   /* Estilo del footer */
