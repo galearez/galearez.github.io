@@ -31,7 +31,7 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   color: lightgray;
 }
@@ -81,26 +81,25 @@ header a {
 }
 
 /* Estilo de la seccion 'sobre mi' */
-section#mi {
+section#yo {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section#yo > main {
-  width: 550px;
+  padding: 20px;
 }
 section#yo p {
   margin-bottom: 10px;
   line-height: 1.2rem;
   color: lightgray;
 }
+section#yo > .main p + h3 {
+  margin-top: 15px;
+}
 section#yo ul {
   padding: 0.8rem;
+  padding-right: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 5px;
+  row-gap: 8px;
   color: lightgray;
 }
 section#yo ul li::before {
@@ -225,6 +224,9 @@ footer > main p {
     font-size: 18px;
     --container-height: 90vh;
   }
+  h2 {
+    font-size: 3rem;
+  }
 
   /* Estilo de la barra de navegación */
   nav {
@@ -266,5 +268,20 @@ footer > main p {
   }
   h1 + p {
     font-size: 2.8rem;
+  }
+
+  /* Estilo de la sección sobre mi */
+  section#yo {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#yo ul {
+    column-gap: 0;
+  }
+  section#yo > .main {
+    width: 550px;
   }
 }
