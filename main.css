@@ -12,7 +12,7 @@ html {
 }
 :root {
   --container-height: 100vh;
-  font-size: 16px;
+  font-size: 18px;
 }
 body {
   width: min(1500px, 100%);
@@ -141,7 +141,12 @@ section#proyectos {
   flex-direction: column;
   gap: 20px;
 }
-.tarjeta .info > ul {
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tarjeta .info .descripcion > ul {
   display: flex;
   gap: 15px;
 }
@@ -206,7 +211,7 @@ footer > .main button:hover {
 /* Estilo para dispositivos de escritorio */
 @media screen and (min-width: 1048px) {
   :root {
-    font-size: 18px;
+    font-size: 20px;
     --container-height: 90vh;
   }
   h2 {
@@ -291,11 +296,11 @@ footer > .main button:hover {
   .tarjeta > .img {
     display: block;
   }
-  .tarjeta .info > p {
+  .tarjeta .info .descripcion {
     background-color: #383838;
     padding: 28px 30px;
   }
-  .proyecto-der .info > ul {
+  .proyecto-der .info .descripcion > ul {
     align-self: flex-end;
   }
   .tarjeta .img {
